@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cesars.becrox.com.cesars.MainActivity"
+    tools:context="cesars.becrox.com.cesars.ui.bio.BioActivity"
     >
 
   <me.kaelaela.verticalviewpager.VerticalViewPager
@@ -72,34 +72,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/stats"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="1 404 followers"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textColor="@android:color/black"
-        android:textStyle="bold"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="532k photo views"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textColor="@android:color/black"
-        android:textStyle="bold"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:text="@string/more_about_me"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         />
@@ -116,6 +88,7 @@
           android:layout_height="wrap_content"
           android:background="@android:color/transparent"
           app:srcCompat="@drawable/ic_github"
+          tools:ignore="ContentDescription"
           />
 
       <ImageButton
@@ -125,6 +98,18 @@
           android:layout_marginStart="8dp"
           android:background="@android:color/transparent"
           app:srcCompat="@drawable/ic_linkedin"
+          tools:ignore="ContentDescription"
+          />
+
+      <ImageButton
+          android:id="@+id/emailButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="8dp"
+          android:layout_marginStart="8dp"
+          android:background="@android:color/transparent"
+          app:srcCompat="@drawable/ic_email"
+          tools:ignore="ContentDescription"
           />
     </LinearLayout>
 
