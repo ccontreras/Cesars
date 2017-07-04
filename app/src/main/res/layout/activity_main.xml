@@ -1,46 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="cesars.becrox.com.cesars.MainActivity"
     >
 
-  <android.support.v4.view.ViewPager
-      android:id="@+id/my_photos_pager"
+  <me.kaelaela.verticalviewpager.VerticalViewPager
+      android:id="@+id/photoPager"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_centerInParent="true"
       />
 
-  <android.support.v7.widget.Toolbar
-      android:id="@+id/toolbar"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"
-      android:background="@android:color/transparent"
-      android:minHeight="?attr/actionBarSize"
-      android:theme="?attr/actionBarTheme"
+  <me.relex.circleindicator.CircleIndicator
+      android:id="@+id/indicator"
+      android:layout_width="25dp"
+      android:layout_height="150dp"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      app:ci_orientation="vertical"
+      />
+
+  <LinearLayout
+      android:id="@+id/aboutContainer"
+      android:layout_width="250dp"
+      android:layout_height="match_parent"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentRight="true"
+      android:background="@color/colorPrimary"
+      android:orientation="vertical"
+      android:padding="24dp"
       >
 
-    <RelativeLayout
+    <TextView
+        android:id="@+id/myNameText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/my_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        />
+
+    <View
+        android:layout_width="70dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/black"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/bio"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/my_bio"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/stats"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="1 404 followers"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="532k photo views"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/more_about_me"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         >
 
-      <Button
+      <ImageButton
+          android:id="@+id/githubAccount"
           android:layout_width="wrap_content"
-          android:layout_height="25dp"
-          android:layout_centerInParent="true"
-          android:background="@drawable/bg_follow_btn"
-          android:gravity="center"
-          android:text="@string/follow"
-          android:textAllCaps="false"
-          android:textColor="@android:color/white"
-          android:textStyle="bold"
+          android:layout_height="wrap_content"
+          android:background="@android:color/transparent"
+          app:srcCompat="@drawable/ic_github"
           />
-    </RelativeLayout>
-  </android.support.v7.widget.Toolbar>
+
+      <ImageButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="8dp"
+          android:layout_marginStart="8dp"
+          android:background="@android:color/transparent"
+          app:srcCompat="@drawable/ic_linkedin"
+          />
+    </LinearLayout>
+
+  </LinearLayout>
 
 </RelativeLayout>

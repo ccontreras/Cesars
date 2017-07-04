@@ -1,4 +1,9 @@
 <resources>
   <string name="app_name">Cesars</string>
   <string name="follow">Follow</string>
+  <string name="more_about_me">MORE ABOUT ME</string>
+  <string name="stats">STATS</string>
+  <string name="my_bio">I am a Dominican Republic based Android Developer who specialises on creating awesome Android Apps for people.</string>
+  <string name="bio">BIO</string>
+  <string name="my_name">César\nContreras</string>
 </resources>
