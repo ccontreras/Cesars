@@ -85,9 +85,6 @@ public class MainActivity extends AppCompatActivity {
    */
   private class PhotoAdapter extends PagerAdapter {
 
-    private static final int RESIZE_WIDTH = 600; // in pixels
-    private static final int RESIZE_HEIGHT = 400; // in pixels
-
     /**
      * The current context.
      */
@@ -126,8 +123,6 @@ public class MainActivity extends AppCompatActivity {
       Picasso.with(mContext)
           .load(mPhotos[position])
           .noFade()
-          .resize(RESIZE_WIDTH, RESIZE_HEIGHT)
-          .centerCrop()
           .into(image);
 
       container.addView(image);
